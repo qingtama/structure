@@ -30,7 +30,7 @@ public class FirstServlet extends HttpServlet {
 
     private void dataInMemcache(String key){
         try {
-            MemcachedClient client = new XMemcachedClient("host", 11211);
+            MemcachedClient client = new XMemcachedClient("127.0.0.1", 11211);
 
             //store a value for one hour(synchronously).
             client.set("key", 3600,  key);
